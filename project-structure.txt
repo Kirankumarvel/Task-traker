@@ -1,0 +1,15 @@
+task-tracker/
+│
+├── app.py                 # Main Flask application
+├── requirements.txt       # Dependencies
+│
+├── static/
+│   └── styles.css         # CSS styles
+│
+├── templates/
+│   ├── base.html          # Base template
+│   ├── index.html         # Main page
+│   ├── edit.html          # Edit task page
+│   └── 404.html           # 404 error page
+│
+└── README.md              # Project documentation
