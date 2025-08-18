@@ -1,15 +1,22 @@
 task-tracker/
 │
-├── app.py                 # Main Flask application
-├── requirements.txt       # Dependencies
+├── app/                      # Application package
+│   ├── __init__.py           # Flask app initialization
+│   ├── routes.py             # Route definitions
+│   ├── models.py             # Data models (if any)
+│   └── templates/            # HTML templates
+│       ├── base.html         # Base template
+│       └── index.html        # Main page template
 │
-├── static/
-│   └── styles.css         # CSS styles
+├── tests/                    # Test files
+│   └── test_app.py           # Unit tests
 │
-├── templates/
-│   ├── base.html          # Base template
-│   ├── index.html         # Main page
-│   ├── edit.html          # Edit task page
-│   └── 404.html           # 404 error page
+├── venv/                     # Virtual environment (ignored)
 │
-└── README.md              # Project documentation
+├── .dockerignore             # Specifies files to ignore in Docker builds
+├── .gitignore                # Git ignore file
+├── Dockerfile                # Docker configuration
+├── docker-compose.yml        # Docker Compose configuration (optional)
+├── requirements.txt          # Python dependencies
+├── app.py                    # Main application entry point (legacy)
+└── README.md                 # Project documentation
