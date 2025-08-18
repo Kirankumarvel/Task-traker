@@ -1,22 +1,34 @@
 task-tracker/
 │
-├── app/                      # Application package
-│   ├── __init__.py           # Flask app initialization
-│   ├── routes.py             # Route definitions
-│   ├── models.py             # Data models (if any)
-│   └── templates/            # HTML templates
-│       ├── base.html         # Base template
-│       └── index.html        # Main page template
+├── app/                          # Application package
+│   ├── __init__.py               # Flask app factory
+│   ├── models.py                 # Database models
+│   ├── routes.py                 # All route definitions
+│   ├── utils/                    # Utility functions
+│   │   ├── db_utils.py           # Database operations
+│   │   └── logging_utils.py      # Logging configuration
+│   └── templates/                # Jinja2 templates
+│       ├── base.html             # Base template
+│       ├── index.html            # Task list view
+│       ├── edit.html             # Edit task view
+│       ├── 404.html              # Error pages
+│       └── 500.html              # Error pages
 │
-├── tests/                    # Test files
-│   └── test_app.py           # Unit tests
+├── tests/                        # Test suite
+│   ├── unit/                     # Unit tests
+│   └── integration/              # Integration tests
 │
-├── venv/                     # Virtual environment (ignored)
+├── docker/                       # Docker configurations
+│   ├── nginx/
+│   │   └── nginx.conf            # Nginx configuration
+│   └── entrypoint.sh             # Startup script
 │
-├── .dockerignore             # Specifies files to ignore in Docker builds
-├── .gitignore                # Git ignore file
-├── Dockerfile                # Docker configuration
-├── docker-compose.yml        # Docker Compose configuration (optional)
-├── requirements.txt          # Python dependencies
-├── app.py                    # Main application entry point (legacy)
-└── README.md                 # Project documentation
+├── .env                          # Environment variables (template)
+├── .dockerignore                 # Files to exclude from Docker builds
+├── Dockerfile                    # Production Dockerfile
+├── docker-compose.yml            # Multi-container orchestration
+├── requirements.txt              # Python dependencies
+├── requirements-dev.txt          # Development dependencies
+├── task_tracker.log              # Application logs (auto-generated)
+├── tasks.db                      # SQLite database (auto-generated)
+└── README.md                     # Project documentation
